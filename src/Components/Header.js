@@ -7,10 +7,10 @@ export default function Header() {
     fetch("https://favqs.com/api/qotd")
     .then(res => res.json())
     .then(
-        (quote) => {
-            setQuote(quote.body);
-            setAuthor(author.author);
-            console.log(quote);
+        (qotd_date) => {
+            setQuote(qotd_date.quote.body);
+            setAuthor(qotd_date.quote.author);
+            console.log(qotd_date);
         }
     )
   }
